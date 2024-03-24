@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&family=Poppins:ital,wght@0,100;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --a:0; 
+    /* hum ek variable mai 0 hold kra rhe hain greenplay button k lie jb koi hover kre to opacity 1 hojaye  */
+}
+
+
+.nav svg {
+    margin-top: 10px;
+    background-color: rgb(13, 13, 13);
+    /* background-color: red; */
+    border-radius: 17px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+    
+}
+.container {
+    height: 100%;
+}
+.left {
+    /* height: 100%; */
+    width: 30vw;
+    padding: 10px;
+}
+.right {
+    width: 100vw;
+    position: relative;    /*kyuki hume playbar ko sbse niche lana hai tbhi hum parent elem ko yeh die.  */
+    background: hsla(0, 0%, 1%, 1);
+
+background: linear-gradient(85deg, hsla(0, 0%, 1%, 1) 30%, hsla(0, 1%, 15%, 1) 100%);
+
+background: -moz-linear-gradient(85deg, hsla(0, 0%, 1%, 1) 30%, hsla(0, 1%, 15%, 1) 100%);
+
+background: -webkit-linear-gradient(85deg, hsla(0, 0%, 1%, 1) 30%, hsla(0, 1%, 15%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#030303", endColorstr="#272626", GradientType=1 );
+}
+
+.home ul li {
+    margin: 0 6px;
+    display: flex;
+    gap: 11px;
+    align-items: baseline;
+    /* baseline ko krne se home aur search jo hain wo line mai agye dono logo ke  */
+    margin-top: 10px;
+}
+
+.home ul li img {
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+    list-style: none;
+    /* padding-top: 18px; */
+}
+.heading {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+        padding-top: 14px;
+        font-weight: bold;
+        align-items: center;
+        padding: 23px 14px;
+}
+.library {
+    min-height: 75.7vh;
+    position: relative;
+}
+.library h2 {
+    font-size: 15px;
+}
+.heading img {
+    width: 30px;
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    color: grey;
+    gap: 8px;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+    line-height: 10px;
+}
+.footer a {
+    color: grey;
+    font-size: 10px;
+    text-decoration: none;
+} 
+.right {
+    margin: 16px 0;
+    /* max-height: 100vh;
+    overflow: scroll; */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(20 19 19);
+    height: 80px;
+}
+.header > * {
+    padding: 20px;
+}
+.spotifyplaylists {
+    padding: 4px 20px;
+}
+.spotifyplaylists h1 {
+    font-size: 23px;
+    margin: 15px 0;
+}
+.spotifyplaylists .card {
+    width: 170px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+}
+
+.cards-container {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 14px;
+    overflow-y: scroll;
+    max-height: 67vh;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card > * {
+    padding-top: 0px;
+}
+
+.card {
+    position: relative;;
+}
+.card:hover {
+    background-color: rgb(61, 58, 58);
+    cursor: pointer;
+    transition: all .8s;
+    --a:1;
+}
+.card>* {
+    padding-top: 10px;
+}
+
+.play {
+    width: 28px;
+    height: 28px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 135px;
+    right: 15px;
+    opacity: var(--a);
+    transition: ease-in-out .4s;
+}
+
+
+.play svg {
+    /* margin: 5px; */
+    margin-left: 2px;
+}
+
+.buttons {
+    margin-top: -10px;
+}
+
+.buttons button {
+    /* background-color: black; */
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10%;
+    
+}
+.buttons .signup {
+    background-color: #141313;
+    color: rgba(255, 255, 255, 0.712);
+    /* margin-right: 20px; */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+.buttons .signup:hover {
+    color: white;
+    font-size: 17.2px;
+    font-weight: bolder;
+}
+
+.buttons .login {
+    background-color: white;
+    color: black;
+    width: 120px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.login:hover {
+    font-size: 17.2px;
+    font-weight: bolder;
+}
+
+.playbar {
+    position: absolute;
+    bottom: 12px;
+    width: 70vw;
+    gap: 16px;
+    padding: 14px;
+    /* padding dene se playbtn or seekbar dono barabar shift honge   */
+    filter: invert(1);   /* isko krne se buttons pr focus hojyega jyega */
+    /* making light colors dark and dark colors light. */
+    background: rgb(229, 226, 226);
+    border-radius: 25px;
+    min-height: 35px;
+    /* height dene se playbutton upr chle jaynge baki sb whi rhnge jis se ki space bna rhega btns or seekbafr mai  */
+    
+}
+
+.playbar .songbuttons {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+}
+
+.songslist ul {
+    padding: 0 6px;
+
+   
+}
+.songslist ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border: 1px solid white;
+    padding: 4px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    /* background-color: red; */
+}
+.songslist {
+    height: 344px;
+    margin-bottom: 44px;
+}
+.songslist .info {
+    font-size: 13px;
+    /* background-color: red; */
+    width: 250px;
+    margin-top: 3px;
+}
+.songslist{
+    /* height: 1800px; */
+     overflow: auto;  /*for scrollbar  */
+}
+
+.playnow span {
+    /* background-color: red; */
+    font-size: 12px;
+    /* width: 100px; */
+    padding: 10px;
+    /* padding-top: -100px; */
+    margin-right: -13px;
+}
+.playnow img {
+    height: 3vh;
+    margin-bottom: -5px;
+    margin-right: 50px;
+}
+#imgplay {
+    margin-top: -20px;
+}
+
+.seekbar {
+    height: 4px;
+    width: 98%;
+    background: #000;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 6px;
+    cursor: pointer;
+}
+.circle {
+    height: 13px;
+    width: 13px;
+    border-radius: 12px;
+    background-color: black;
+    position: fixed;
+    bottom: 1px;
+    transition: left 0.5s;  /* jb jb mai circle me left ko change krunga tb tb yeh left se move hoga this is for music timeline  */
+    left: 0;
+}
+.songbuttons img {
+    cursor: pointer;
+}
+.abovebar {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 0 12px;
+    margin: 12px 0;
+}
+.hamburgerandarrow img {
+    display: none;
+}
+.hamburgerandarrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.close {
+    display: none;
+}
+.timenvol {
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 10px;
+}
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 1200px){
+    .left{
+        background-color: black;  
+        position: absolute;
+        left: -100%;
+        transition: all .3s;
+        width: 385px;
+        z-index: 1;
+
+    }
+    .close {
+        display: block;
+    }
+    .left .close {
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+    }
+    .seekbar {
+        width: 100%;
+    }
+    .right{
+        width: 100vw;
+    }
+    .playbar {
+         width: 80vw;
+    }
+    .playbar .songbuttons {
+        gap: 20px;
+    }
+    .hamburgerandarrow img {
+        display: block;
+    }
+    .abovebar {
+        padding: 0 -20px;
+        gap: 2px;
+    }
+    .abovebar.songinfo {
+        margin-left: -10px;
+    }
+    .spotifyplaylists .card {
+        width: 250px;
+    }
+    .card {
+        width: 90vw;
+        margin-right: 20px;
+    }
+    .cards-container {
+        justify-content: center;
+    }
+    .right {
+        margin: 0;
+    }
+.abovebar {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+.left {
+    padding: 0;
+}
+.timenvol {
+    flex-direction: column;
+    gap: 8px;
+}
+.play {
+    margin-top: 70px;
+}
+
+.hamburgerandarrow {
+    margin-top: 10px;
+}
+.hamburgerandarrow svg {
+    /* margin-top: 40px; */
+    /* background-color: red; */
+    margin-top: 1px;
+}
+
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 84vw;
+    }
+}
